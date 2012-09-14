@@ -40,7 +40,16 @@ class PinYin(object):
         for char in string:
             key = '%X' % ord(char)
             result.append(self.word_dict.get(key, char).split()[0][:-1].lower())
-        return '-'.join(result)
+
+        return result
+
+
+    def hanzi2pinyin_split(self, string="", split=""):
+        result = self.hanzi2pinyin(string=string)
+        if split == "":
+            return result
+        else:
+            return split.join(result)
 
 
 if __name__ == "__main__":
@@ -48,4 +57,5 @@ if __name__ == "__main__":
     test.load_word()
     string = "钓鱼岛是中国的"
     print "in: %s" % string
-    print "out: %s" % test.hanzi2pinyin(string=string)
+    print "out: %s" % str(test.hanzi2pinyin(string=string))
+    print "out: %s" % test.hanzi2pinyin_split(string=string, split="-")
