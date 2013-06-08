@@ -13,11 +13,11 @@ import os.path
 
 
 class PinYin(object):
-    def __init__(self, dict_file='word.data'):
+    def __init__(self):
         self.word_dict = {}
-        self.dict_file = dict_file
-
-
+        dirname, filename = os.path.split(__file__)        
+        self.dict_file = os.path.join(dirname, 'word.data')
+        
     def load_word(self):
         if not os.path.exists(self.dict_file):
             raise IOError("NotFoundFile")
