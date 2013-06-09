@@ -16,13 +16,16 @@ class PinYin(object):
     def __init__(self):
         self.word_dict = {}
         dirname, filename = os.path.split(__file__)        
-        self.dict_file = os.path.join(dirname, 'word.data')
+        dict_file = os.path.join(dirname, 'word.data')
+        self.load_word(dict_file)
         
-    def load_word(self):
-        if not os.path.exists(self.dict_file):
+    def load_word(self, dict_file):        
+        if not os.path.exists(dict_file):
             raise IOError("NotFoundFile")
-
-        with file(self.dict_file) as f_obj:
+        if len(self.word_dict.keys()) > 0:
+            print 'Dictionary already loaded'
+            return
+        with file(dict_file) as f_obj:
             for f_line in f_obj.readlines():
                 try:
                     line = f_line.split('    ')
@@ -30,7 +33,7 @@ class PinYin(object):
                 except:
                     line = f_line.split('   ')
                     self.word_dict[line[0]] = line[1]
-
+        f_obj.close()
 
     def hanzi2pinyin(self, string=""):
         result = []
@@ -54,7 +57,6 @@ class PinYin(object):
 
 if __name__ == "__main__":
     test = PinYin()
-    test.load_word()
     string = "钓鱼岛是中国的"
     print "in: %s" % string
     print "out: %s" % str(test.hanzi2pinyin(string=string))

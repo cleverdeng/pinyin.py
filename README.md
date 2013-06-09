@@ -8,8 +8,7 @@ Example:
 
     from pinyin import PinYin
     
-    test = PinYin()
-    test.load_word()
+    test = PinYin()    
     test.hanzi2pinyin(string='钓鱼岛是中国的')
 
 
