@@ -36,10 +36,27 @@ Example:
 
 Out:
 
-    test.hanzi2pinyin(string='钓鱼岛是中国的')
-    ['diao', 'yu', 'dao', 'shi', 'zhong', 'guo', 'de']
-    test.hanzi2pinyin_split(string='钓鱼岛是中国的', split="-")
-    diao-yu-dao-shi-zhong-guo-de
+    in: Chrome浏览器版本29
+    convert just Hanzi:
+    out: Chromeliulanqibanben29
+    out: C-h-r-o-m-e-liu-lan-qi-ban-ben-2-9
+    out: Chromellqbb29
+    convert all:
+    out: Chromeliulanqibanben29
+    out: C-h-r-o-m-e-liu-lan-qi-ban-ben-2-9
+    out: Chromellqbb29
+    --------------------
+
+    in: 植物大战僵尸2：奇妙时空之旅（Plants vs. Zombies 2: Its About Time）
+    convert just Hanzi:
+    out: zhiwudazhanjiangshi2：qimiaoshikongzhilv（Plants vs. Zombies 2: Its About Time）
+    out: zhi-wu-da-zhan-jiang-shi-2-：-qi-miao-shi-kong-zhi-lv-（-P-l-a-n-t-s- -v-s-.- -Z-o-m-b-i-e-s- -2-:- -I-t-s- -A-b-o-u-t- -T-i-m-e-）
+    out: zwdzjs2：qmskzl（Plants vs. Zombies 2: Its About Time）
+    convert all:
+    out: zhiwudazhanjiangshi2：qimiaoshikongzhilv（Plants vs. Zombies 2: Its About Time）
+    out: zhi-wu-da-zhan-jiang-shi-2-：-qi-miao-shi-kong-zhi-lv-（-P-l-a-n-t-s- -v-s-.- -Z-o-m-b-i-e-s- -2-:- -I-t-s- -A-b-o-u-t- -T-i-m-e-）
+    out: zwdzjs2：qmskzl（Plants vs. Zombies 2: Its About Time）
+    --------------------
 
 -------
 
