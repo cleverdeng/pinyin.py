@@ -43,8 +43,9 @@ class PinYin(object):
         for char in string:
             key = '%X' % ord(char)
 
+            #result.append(self.word_dict.get(key, char).split()[0][:-1].lower())
             pychar = self.word_dict.get(key, char)
-            if pychar != char:
+            if pychar.strip():
                 pychar = pychar.split()[0][:-1].lower()
 
             result.append(pychar)
@@ -112,7 +113,8 @@ if __name__ == "__main__":
 
 
     #简单字符串
-    string = u'Chrome浏览器版本29'
+    string = 'Chrome浏览器版本29'
+    #string = u'猎'
     run_test(string)
 
     #补充例子，复杂字符串

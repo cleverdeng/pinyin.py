@@ -38,9 +38,9 @@ Out:
 
     in: Chrome浏览器版本29
     convert just Hanzi:
-    out: Chromeliulanqibanben29
-    out: C-h-r-o-m-e-liu-lan-qi-ban-ben-2-9
-    out: Chromellqbb29
+    out: liulanqibanben
+    out: ------liu-lan-qi-ban-ben--
+    out: llqbb
     convert all:
     out: Chromeliulanqibanben29
     out: C-h-r-o-m-e-liu-lan-qi-ban-ben-2-9
@@ -49,9 +49,9 @@ Out:
 
     in: 植物大战僵尸2：奇妙时空之旅（Plants vs. Zombies 2: Its About Time）
     convert just Hanzi:
-    out: zhiwudazhanjiangshi2：qimiaoshikongzhilv（Plants vs. Zombies 2: Its About Time）
-    out: zhi-wu-da-zhan-jiang-shi-2-：-qi-miao-shi-kong-zhi-lv-（-P-l-a-n-t-s- -v-s-.- -Z-o-m-b-i-e-s- -2-:- -I-t-s- -A-b-o-u-t- -T-i-m-e-）
-    out: zwdzjs2：qmskzl（Plants vs. Zombies 2: Its About Time）
+    out: zhiwudazhanjiangshiqimiaoshikongzhilv
+    out: zhi-wu-da-zhan-jiang-shi---qi-miao-shi-kong-zhi-lv-------- ---- -------- --- ---- ------ -----
+    out: zwdzjsqmskzl
     convert all:
     out: zhiwudazhanjiangshi2：qimiaoshikongzhilv（Plants vs. Zombies 2: Its About Time）
     out: zhi-wu-da-zhan-jiang-shi-2-：-qi-miao-shi-kong-zhi-lv-（-P-l-a-n-t-s- -v-s-.- -Z-o-m-b-i-e-s- -2-:- -I-t-s- -A-b-o-u-t- -T-i-m-e-）
