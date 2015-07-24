@@ -37,10 +37,11 @@ class PinYin(object):
         if not isinstance(string, unicode):
             string = string.decode("utf-8")
         
+    print res.status,res.reason
         for char in string:
             key = '%X' % ord(char)
             if self.word_dict.get(key)!=None :
-                result.append(self.word_dict.get(key, char).split()[0][:-1].lower())
+                result.append(self.word_dict.get(key).split()[0][:-1].lower())
 
         return result
 
