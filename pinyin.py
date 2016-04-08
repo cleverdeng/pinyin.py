@@ -1,5 +1,5 @@
-#!/usr/bin/env python
 # -*- coding:utf-8 -*-
+# update to Python3 script
 
 """
     Author:cleverdeng
@@ -22,7 +22,7 @@ class PinYin(object):
         if not os.path.exists(self.dict_file):
             raise IOError("NotFoundFile")
 
-        with file(self.dict_file) as f_obj:
+        with open(self.dict_file) as f_obj:
             for f_line in f_obj.readlines():
                 try:
                     line = f_line.split('    ')
