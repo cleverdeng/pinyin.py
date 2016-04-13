@@ -5,6 +5,9 @@
     Author:cleverdeng
     E-mail:clverdeng@gmail.com
 """
+"""
+move to python3
+"""
 
 __version__ = '0.9'
 __all__ = ["PinYin"]
@@ -22,7 +25,7 @@ class PinYin(object):
         if not os.path.exists(self.dict_file):
             raise IOError("NotFoundFile")
 
-        with file(self.dict_file) as f_obj:
+        with open(self.dict_file) as f_obj:
             for f_line in f_obj.readlines():
                 try:
                     line = f_line.split('    ')
@@ -34,9 +37,7 @@ class PinYin(object):
 
     def hanzi2pinyin(self, string=""):
         result = []
-        if not isinstance(string, unicode):
-            string = string.decode("utf-8")
-        
+
         for char in string:
             key = '%X' % ord(char)
             result.append(self.word_dict.get(key, char).split()[0][:-1].lower())
@@ -56,6 +57,6 @@ if __name__ == "__main__":
     test = PinYin()
     test.load_word()
     string = "钓鱼岛是中国的"
-    print "in: %s" % string
-    print "out: %s" % str(test.hanzi2pinyin(string=string))
-    print "out: %s" % test.hanzi2pinyin_split(string=string, split="-")
+    print("in: %s" % string)
+    print("out: %s" % str(test.hanzi2pinyin(string=string)))
+    print("out: %s" % test.hanzi2pinyin_split(string=string, split="-"))
